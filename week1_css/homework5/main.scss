@@ -1,0 +1,210 @@
+
+
+$background_color: black;
+$wheatColor:#BF9515;
+$general_font_color: #FFFFFF;
+$borderColor: #FFFFFF;
+
+
+body {
+    background-color: $background_color;
+}
+
+#sitebody { 
+    width:100%;
+    margin:0 auto;
+    font-size:13px;
+}
+
+#header {
+    height:80px;
+    text-align:center;
+    line-height:80px;
+    display:flex;
+    justify-content:center;
+}
+#menu {
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    display:flex;
+    justify-content: center;
+    color: $general_font_color;
+    margin: 10px 0;
+    cursor: pointer;
+    li {
+        width:100px;
+        list-style-type:none;
+    }
+    >li:nth-child(1){
+        color:$wheatColor;
+    }
+
+}
+#ImgContent{
+    height:498px;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    >div:nth-child(1){
+        width:160px;
+    }
+    >div:nth-child(2){
+        width:672px;
+    }
+}
+
+#detailImg{
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    >div{
+        display:flex;
+        flex-direction:column;
+        width: 209px;
+        >img{
+            width: 194px;
+            height: 144px;
+            ~div{
+                width:180px;
+                height: 100px;
+            }
+        }
+    }
+}
+.detailTitle {
+    margin:4px;
+    height: 20px;
+    line-height:20px;
+    text-align:left;
+    color: $general_font_color;
+    margin: 13px 0;
+}
+
+
+#reservations {
+    display:flex;
+    height:150px;
+    justify-content: center;
+    select {
+        width: 140px;;
+        height: 40px;
+        background: transparent;
+        color: $general_font_color;
+    }
+    button {
+        width:140px;
+        height: 40px;
+        background:rgb(191, 149, 21);
+        color: $general_font_color;
+        cursor: pointer;
+    }
+    >div {
+        width:590px;
+        border-bottom: solid;
+        border-top: solid;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        border-color: $borderColor;
+        border-width: 1px;
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    color:$general_font_color;
+    >h2{
+        padding-bottom: 17px;
+    }
+}
+
+.selectBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content:stretch;
+}
+
+
+#footer{
+    clear:both;
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    line-height:80px;
+}
+
+#footerContent{
+    width: 840px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.growOne{
+    flex-grow: 1;
+    text-align:left;
+    display: flex;
+    flex-direction: column;
+    height: 182px;
+    span {
+        line-height: 20px;
+        width: 100px;
+    }
+}
+
+.findUs {
+    flex-grow: 3;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    color: $wheatColor;
+}
+
+.footerContentInfo {
+    line-height: 20px;
+    width: 200px;
+    font-size: 10px;
+}
+
+.footerleft {
+    flex-grow:23;
+    display:flex;
+    flex-direction: column;
+}
+
+.fotterLeftContent {
+    display: flex;
+    color:$general_font_color;
+}
+
+#socialNetwork {
+    align-self:flex-start;
+    color: $general_font_color;
+}
+
+.footerTitle {
+    color:$wheatColor;
+    >div{
+        padding-bottom: 10px;
+    }
+}
+
+.socialIcon{
+    display: flex;
+    align-self: flex-start;
+    height: 30px;
+    span {
+        margin:0 5px;
+    }
+}
+
+.detailReadMore{
+    display: flex;
+    align-content: flex-start;
+    color: $wheatColor;
+    flex-basis: 50px;
+    padding-top: 26px;
+}

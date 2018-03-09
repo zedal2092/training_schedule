@@ -1,234 +1,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 
 <html>
- <head>
-
-<style type="text/css">
-
-body {
-    background-color: black;
-}
-
-#sitebody { 
-width:100%;
-margin:0 auto;
-font-size:13px;
-background-color: black;
-}
-#header {
-/* background-color:#FFD4D4; */
-height:80px;
-text-align:center;
-line-height:80px;
-display:flex;
-justify-content:center;
-}
-#menu {
-/* background-color:#FFD4D4; */
-height:40px;
-text-align:center;
-line-height:40px;
-display:flex;
-justify-content: center;
-color: white;
-margin: 10px 0;
-cursor: pointer;
-}
-#menu div{
-    width:100px;
-    
-}
-#ImgContent{
-height:498px;
-text-align:center;
-display:flex;
-justify-content: center
-}
-#ImgContent>div:nth-child(1){
-width:160px;
-}
-#ImgContent>div:nth-child(2){
-width:672px;
-}
-
-#detailImg{
-text-align:center;
-display:flex;
-justify-content: center;
-}
-.detailTitle {
-    margin:4px;
-    height: 20px;
-    line-height:20px;
-    text-align:left;
-    line-height: 1.3em;
-    color: white;
-    margin: 13px 0;
-}
-#detailImg>div {
-    display:flex;
-    flex-direction:column;
-    width: 209px;
-}
-
-#detailImg>div>img {
-    width: 194px;
-    height: 144px;
-}
-
-#detailImg>div>img~div {
-    width:180px;
-    height: 100px;
-}
-
-#reservations {
-    display:flex;
-    height:150px;
-    justify-content: center;
-}
-#reservations> div {
-    width:590px;
-    border-bottom: solid;
-    border-top: solid;
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    border-color: white;
-    border-width: 1px;
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-    color:white;
-}
-
-.center>h {
-    padding-bottom: 30px;
-    font-size: 18px;
-}
-
-.selectBar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content:stretch;
-}
-
-#reservations select {
-    width: 140px;;
-    height: 40px;
-    background: transparent;
-    color: white;
-}
-
-#reservations button {
-    width:140px;
-    height: 40px;
-    background:rgb(191, 149, 21);
-    color: white;
-    cursor: pointer;
-}
-
-#footer{
-clear:both;
-display: flex;
-justify-content: center;
-text-align:center;
-line-height:80px;
-background-color: black;
-}
-
-#footerContent{
-    width: 840px;;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.growOne{
-    flex-grow: 1;
-    text-align:left;
-    display: flex;
-    flex-direction: column;
-    height: 182px;
-}
-
-.findUs {
-    flex-grow: 3;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    color: wheat;
-}
-.growOne span {
-    line-height: 20px;
-    width: 100px;
-}
-
-.footerContentInfo {
-    line-height: 20px;
-    width: 200px;
-    font-size: 10px;
-}
-
-.footerleft {
-    flex-grow:23;
-    display:flex;
-    flex-direction: column;
-}
-
-.fotterLeftContent {
-    display: flex;
-    color:white;
-}
-
-#socialNetwork {
-    align-self:flex-start;
-    color: white;
-}
-
-.footerTitle {
-    color:wheat;
-}
-
-.socialIcon{
-    display: flex;
-    align-self: flex-start;
-    height: 30px;
-}
-
-.detailReadMore{
-    display: flex;
-    align-content: flex-start;
-    color: wheat;
-    flex-basis: 50px;
-    padding-top: 7px;
-}
-
-.socialIcon span {
-    margin:0 5px;
-}
-
-.footerTitle > div {
-    padding-bottom: 10px;
-}
-
-</style>
+    <head>
+        <link rel="stylesheet" href="./main.css">
     </head>
     <body>
         <div id="sitebody">
             <div id="header">
                 <img src="https://picsum.photos/200/80?random">
             </div>
-            <div id="menu">
-                <div style="color:wheat;" >Home</div>
-                <div >Menu</div>
-                <div>Order Online</div>
-                <div>Events</div>
-                <div>Abouts us</div>
-                <div>Gallery</div>
-            </div>
+            <ui id="menu">
+                <li >Home</li>
+                <li >Menu</li>
+                <li>Order Online</li>
+                <li>Events</li>
+                <li>Abouts us</li>
+                <li>Gallery</li>
+            </ui>
             <div id="ImgContent">
                 <div><img src="https://picsum.photos/200/498?random"></div>
                 <div><img src="https://picsum.photos/600/498?random"></div>
@@ -262,7 +50,7 @@ background-color: black;
                 <div>
                     <div >
                         <div class="center">
-                            <h>Reservations</h>
+                            <h2>Reservations</h2>
                             </div>
                         <div class="selectBar">
                             <select><option value ="Date">Date</option></select>

@@ -1,0 +1,169 @@
+body {
+  background-color: black; }
+
+#sitebody {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 13px; }
+
+#header {
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  display: flex;
+  justify-content: center; }
+
+#menu {
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  margin: 10px 0;
+  cursor: pointer; }
+  #menu li {
+    width: 100px;
+    list-style-type: none; }
+  #menu > li:nth-child(1) {
+    color: #BF9515; }
+
+#ImgContent {
+  height: 498px;
+  text-align: center;
+  display: flex;
+  justify-content: center; }
+  #ImgContent > div:nth-child(1) {
+    width: 160px; }
+  #ImgContent > div:nth-child(2) {
+    width: 672px; }
+
+#detailImg {
+  text-align: center;
+  display: flex;
+  justify-content: center; }
+  #detailImg > div {
+    display: flex;
+    flex-direction: column;
+    width: 209px; }
+    #detailImg > div > img {
+      width: 194px;
+      height: 144px; }
+      #detailImg > div > img ~ div {
+        width: 180px;
+        height: 100px; }
+
+.detailTitle {
+  margin: 4px;
+  height: 20px;
+  line-height: 20px;
+  text-align: left;
+  color: #FFFFFF;
+  margin: 13px 0; }
+
+#reservations {
+  display: flex;
+  height: 150px;
+  justify-content: center; }
+  #reservations select {
+    width: 140px;
+    height: 40px;
+    background: transparent;
+    color: #FFFFFF; }
+  #reservations button {
+    width: 140px;
+    height: 40px;
+    background: #bf9515;
+    color: #FFFFFF;
+    cursor: pointer; }
+  #reservations > div {
+    width: 590px;
+    border-bottom: solid;
+    border-top: solid;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-color: #FFFFFF;
+    border-width: 1px; }
+
+.center {
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF; }
+  .center > h2 {
+    padding-bottom: 17px; }
+
+.selectBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: stretch; }
+
+#footer {
+  clear: both;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 80px; }
+
+#footerContent {
+  width: 840px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.growOne {
+  flex-grow: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 182px; }
+  .growOne span {
+    line-height: 20px;
+    width: 100px; }
+
+.findUs {
+  flex-grow: 3;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  color: #BF9515; }
+
+.footerContentInfo {
+  line-height: 20px;
+  width: 200px;
+  font-size: 10px; }
+
+.footerleft {
+  flex-grow: 23;
+  display: flex;
+  flex-direction: column; }
+
+.fotterLeftContent {
+  display: flex;
+  color: #FFFFFF; }
+
+#socialNetwork {
+  align-self: flex-start;
+  color: #FFFFFF; }
+
+.footerTitle {
+  color: #BF9515; }
+  .footerTitle > div {
+    padding-bottom: 10px; }
+
+.socialIcon {
+  display: flex;
+  align-self: flex-start;
+  height: 30px; }
+  .socialIcon span {
+    margin: 0 5px; }
+
+.detailReadMore {
+  display: flex;
+  align-content: flex-start;
+  color: #BF9515;
+  flex-basis: 50px;
+  padding-top: 26px; }
+
+/*# sourceMappingURL=main.css.map */
