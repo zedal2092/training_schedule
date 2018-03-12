@@ -1,169 +1,148 @@
+.general--font--color {
+  color: #FFFFFF; }
+
+.flex__content-center, #header, #header .heading__title_container, #header .heading__title_style, #header #menu, #ImgContent, #detailImg, #reservations, #reservations > div, #reservations .center, #footer {
+  display: flex;
+  justify-content: center; }
+
+.general_font_color {
+  color: #FFFFFF; }
+
 body {
   background-color: black; }
 
-#sitebody {
-  width: 100%;
-  margin: 0 auto;
-  font-size: 13px; }
-
 #header {
-  height: 80px;
-  text-align: center;
-  line-height: 80px;
-  display: flex;
-  justify-content: center; }
-
-#menu {
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  display: flex;
-  justify-content: center;
-  color: #FFFFFF;
-  margin: 10px 0;
-  cursor: pointer; }
-  #menu li {
-    width: 100px;
-    list-style-type: none; }
-  #menu > li:nth-child(1) {
+  flex-direction: column; }
+  #header .heading__title {
+    font-size: 38px;
+    margin-top: 17px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    width: 200px;
+    margin: 5px; }
+  #header .heading__title_container {
+    width: 237px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    text-align: center; }
+  #header .heading__discribe {
+    font-size: 16px;
+    text-align: center; }
+  #header #menu {
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 20px 0; }
+    #header #menu li {
+      margin: 0px 20px;
+      list-style-type: none; }
+      #header #menu li:hover {
+        color: #BF9515; }
+  #header .menu__active {
     color: #BF9515; }
 
 #ImgContent {
-  height: 498px;
-  text-align: center;
-  display: flex;
-  justify-content: center; }
+  height: 498px; }
   #ImgContent > div:nth-child(1) {
-    width: 160px; }
+    width: 208px; }
   #ImgContent > div:nth-child(2) {
-    width: 672px; }
+    width: 621px; }
 
-#detailImg {
-  text-align: center;
+#detailImg .detailImg-item {
   display: flex;
-  justify-content: center; }
-  #detailImg > div {
-    display: flex;
-    flex-direction: column;
-    width: 209px; }
-    #detailImg > div > img {
-      width: 194px;
-      height: 144px; }
-      #detailImg > div > img ~ div {
-        width: 180px;
-        height: 100px; }
+  flex-direction: column;
+  width: 209px;
+  border-bottom: 1px solid;
+  border-color: #FFFFFF; }
+  #detailImg .detailImg-item > img {
+    width: 194px;
+    height: 144px; }
+    #detailImg .detailImg-item > img ~ div {
+      width: 180px; }
 
-.detailTitle {
-  margin: 4px;
-  height: 20px;
+#detailImg .detailTitle {
   line-height: 20px;
   text-align: left;
   color: #FFFFFF;
-  margin: 13px 0; }
+  margin: 20px 0; }
+
+#detailImg .detailReadMore {
+  display: flex;
+  color: #BF9515;
+  margin-bottom: 20px;
+  font-size: 10px; }
 
 #reservations {
-  display: flex;
-  height: 150px;
-  justify-content: center; }
-  #reservations select {
+  margin-top: 20px; }
+  #reservations .reservationsItemForm, #reservations select, #reservations button {
     width: 140px;
-    height: 40px;
+    height: 40px; }
+  #reservations select {
     background: transparent;
     color: #FFFFFF; }
   #reservations button {
-    width: 140px;
-    height: 40px;
     background: #bf9515;
     color: #FFFFFF;
     cursor: pointer; }
   #reservations > div {
     width: 590px;
+    flex-direction: column;
+    margin-right: 269px;
+    border-color: #FFFFFF;
     border-bottom: solid;
     border-top: solid;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-color: #FFFFFF;
     border-width: 1px; }
-
-.center {
-  display: flex;
-  justify-content: center;
-  color: #FFFFFF; }
-  .center > h2 {
-    padding-bottom: 17px; }
-
-.selectBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: stretch; }
+  #reservations .center {
+    color: #FFFFFF; }
+    #reservations .center > h2 {
+      padding-bottom: 17px; }
+  #reservations .selectBar {
+    display: flex;
+    justify-content: space-around;
+    align-content: stretch;
+    margin-bottom: 20px; }
 
 #footer {
-  clear: both;
-  display: flex;
-  justify-content: center;
-  text-align: center;
   line-height: 80px; }
-
-#footerContent {
-  width: 840px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; }
-
-.growOne {
-  flex-grow: 1;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  height: 182px; }
-  .growOne span {
+  #footer #footerContent {
+    width: 840px;
+    display: flex;
+    justify-content: space-around; }
+  #footer .footerLeftContentItem {
+    flex-grow: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column; }
+    #footer .footerLeftContentItem span {
+      line-height: 20px;
+      width: 100px; }
+  #footer .footerRightContent {
+    flex-grow: 3;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #FFFFFF; }
+  #footer .footerContentInfo {
     line-height: 20px;
-    width: 100px; }
-
-.findUs {
-  flex-grow: 3;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  color: #BF9515; }
-
-.footerContentInfo {
-  line-height: 20px;
-  width: 200px;
-  font-size: 10px; }
-
-.footerleft {
-  flex-grow: 23;
-  display: flex;
-  flex-direction: column; }
-
-.fotterLeftContent {
-  display: flex;
-  color: #FFFFFF; }
-
-#socialNetwork {
-  align-self: flex-start;
-  color: #FFFFFF; }
-
-.footerTitle {
-  color: #BF9515; }
-  .footerTitle > div {
+    font-size: 10px; }
+  #footer .footerleft {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column; }
+  #footer .footerLeftContent {
+    display: flex;
+    color: #FFFFFF;
+    border-top: 1px solid #FFFFFF; }
+  #footer #socialNetwork {
+    align-self: flex-start;
+    color: #FFFFFF;
+    margin-top: 20px; }
+  #footer .footerTitle {
+    color: #BF9515; }
+  #footer .footerTitle__padding__bottom-10px {
     padding-bottom: 10px; }
-
-.socialIcon {
-  display: flex;
-  align-self: flex-start;
-  height: 30px; }
-  .socialIcon span {
-    margin: 0 5px; }
-
-.detailReadMore {
-  display: flex;
-  align-content: flex-start;
-  color: #BF9515;
-  flex-basis: 50px;
-  padding-top: 26px; }
-
-/*# sourceMappingURL=main.css.map */
+  #footer .socialIcon {
+    display: flex;
+    padding-top: 15px; }
+  #footer .footerAdditionalInfo {
+    line-height: 40px;
+    font-size: 10px; }

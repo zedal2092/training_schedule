@@ -1,87 +1,98 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
 
 <html>
     <head>
         <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="../../node_modules/normalize.css">
+        <link rel="stylesheet" href="./socailNetworkIcons.css">
+        <title>homework5</title>
     </head>
     <body>
-        <div id="sitebody">
+        <div id="container">
             <div id="header">
-                <img src="https://picsum.photos/200/80?random">
+                    <!-- <img src="https://picsum.photos/200/80?random"> -->
+                <div class="general--font--color">
+                    <div>
+                        <div class="heading__title_style">
+                            <div class="heading__title_container">
+                                <div class="heading__title">The PUB</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heading__discribe">
+                        The best night in town
+                    </div>
+                </div>
+                <div>
+                    <ul id="menu">
+                        <li class="menu__active">Home</li>
+                        <li >Menu</li>
+                        <li>Order Online</li>
+                        <li>Events</li>
+                        <li>Abouts us</li>
+                        <li>Gallery</li>
+                    </ul>
+                </div>
+                
             </div>
-            <ui id="menu">
-                <li >Home</li>
-                <li >Menu</li>
-                <li>Order Online</li>
-                <li>Events</li>
-                <li>Abouts us</li>
-                <li>Gallery</li>
-            </ui>
             <div id="ImgContent">
                 <div><img src="https://picsum.photos/200/498?random"></div>
                 <div><img src="https://picsum.photos/600/498?random"></div>
             </div>
             <div id="detailImg">
-                <div>
+                <div class="detailImg-item">
                     <div class="detailTitle">karaoke night</div>
                     <img src="https://picsum.photos/180/100?image=0">
                     <div class="detailTitle">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</div>
                     <a href="#" class="detailReadMore">Read more</a>
                 </div>
-                <div>
+                <div class="detailImg-item">
                     <div class="detailTitle">Enjoy Our Snacks</div>
                     <img src="https://picsum.photos/180/100?image=20">
                     <div class="detailTitle">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</div>
                     <a href="#" class="detailReadMore">Read more</a>
                 </div>
-                <div>
+                <div class="detailImg-item">
                     <div class="detailTitle">Celebrate With Us</div>
                     <img src="https://picsum.photos/180/100?image=65">
                     <div class="detailTitle">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</div>
                     <a href="#" class="detailReadMore">Read more</a>
                 </div>
-                <div style="padding-right:16px;" >
+                <div class="detailImg-item" >
                     <div class="detailTitle">Happy Hour</div>
                     <img src="https://picsum.photos/180/100?image=77">
                     <div class="detailTitle">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</div>
                 </div>
             </div>
             <div id="reservations">
-                <div>
-                    <div >
-                        <div class="center">
-                            <h2>Reservations</h2>
-                            </div>
-                        <div class="selectBar">
-                            <select><option value ="Date">Date</option></select>
-                            <select><option value ="Time">Time</option></select>
-                            <select><option value ="PartySize">Party Size</option></select>
-                            <button >Book Now</button>
-                        </div>
+                <div >
+                    <div class="center">
+                        <h2>Reservations</h2>
+                    </div>
+                    <div class="selectBar">
+                        <select><option value ="Date">Date</option></select>
+                        <select><option value ="Time">Time</option></select>
+                        <select><option value ="PartySize">Party Size</option></select>
+                        <button >Book Now</button>
                     </div>
                 </div>
-                <div style="width:252px;">
-                    
-                </div>
-            </div>
-                
             </div>
             <div id="footer">
                 <div id="footerContent">
                     <div class="footerleft">
-                       <div class="fotterLeftContent">
-                            <div class="growOne">
+                       <div class="footerLeftContent">
+                            <div class="footerLeftContentItem">
                                     <div class="footerTitle">contact</div>
-                                    <div style="padding-bottom:10px">
+                                    <div class = "footerTitle__padding__bottom-10px">
                                         <div class="footerContentInfo">500 Terry Francois Street</div>
                                         <div class="footerContentInfo">San Francisco, CA  94158</div>
                                     </div>
-                                    <div>
+                                    <div class="footerTitle__padding__bottom-10px">
                                         <div class="footerContentInfo">E  /  Info@mysite.com</div>
                                         <div class="footerContentInfo">T  /  123-456-7890</div>
                                     </div>
                                 </div>
-                                <div class="growOne">
+                                <div class="footerLeftContentItem">
                                     <div class = "footerTitle">opening hours</div>  
                                     <div class="footerContentInfo">Monday - Friday</div>
                                     <div class="footerContentInfo">11am - 11pm</div>
@@ -90,22 +101,20 @@
                                 </div>
                        </div>
                         <div id="socialNetwork">
-                            <div class="socialIcon"> 
-                                <span><img src="https://picsum.photos/35/35?image=21"></span>
-                                <span><img src="https://picsum.photos/35/35?random=58"></span>
-                                <span><img src="https://picsum.photos/35/35?random=98"></span>
-                                <span><img src="https://picsum.photos/35/35?random=123"></span>
-                            </div>
-                            <div style="font-size:10px;">
+                            <ul class="soc socialIcon">
+                                    <li><a class="soc-twitter" href="#"></a></li>
+                                    <li><a class="soc-instagram" href="#"></a></li>
+                                    <li><a class="soc-facebook" href="#"></a></li>
+                                    <li><a class="soc-googleplus soc-icon-last" href="#"></a></li>
+                                </ul>
+                            <div class="footerAdditionalInfo">
                                 © 2023 by  THE PUB. Proudly created with Wix.com
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="findUs">
-                        <div>find us</div>
+                    <div class="footerRightContent">
+                        <div class="footerTitle">find us</div>
                         <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14732.670032763162!2d120.3041622378218!3d22.61021917115723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDM2JzM2LjciTiAxMjDCsDE4JzQ2LjUiRQ!5e0!3m2!1szh-TW!2stw!4v1520258896011" width="455" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-                        
                     </div>
                 </div>
             </div>
