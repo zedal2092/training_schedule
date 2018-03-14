@@ -1,0 +1,59 @@
+
+$background-color:#FFFFFF;
+
+
+@mixin header__bar_color ($color) {
+    background-color: $color;
+    width: 160px;
+    height: 10px;
+}
+
+.flex__content-center {
+    display: flex;
+    justify-content: center;
+}
+
+#header {
+    background-color: $background-color;
+    @extend .flex__content-center;
+    flex-wrap: wrap;
+    // flex-direction: column;
+
+    .header__upper_line { 
+        display: flex;
+        align-items: stretch;
+        width: 840px;
+
+        .first__bar_color {
+            @include header__bar_color(red)
+        }
+        .second__bar_color {
+            @include header__bar_color(green)
+        }
+        .third__bar_color {
+            @include header__bar_color(wheat)
+        }
+        .fourth__bar_color {
+            @include header__bar_color(red)
+        }
+        .fifth__bar_color {
+            @include header__bar_color(green)
+        }
+        .sixth__bar_color {
+            @include header__bar_color(wheat)
+        }
+    }
+
+    .header__content {
+        @extend .flex__content-center;
+        width: 840px;
+        height: 160px;
+        .header__left_content {
+            
+        }
+        .header__menu {
+
+        }
+    }
+
+}

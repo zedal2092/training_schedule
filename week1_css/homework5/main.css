@@ -1,148 +1,136 @@
-.general--font--color {
-  color: #FFFFFF; }
-
-.flex__content-center, #header, #header .heading__title_container, #header .heading__title_style, #header #menu, #ImgContent, #detailImg, #reservations, #reservations > div, #reservations .center, #footer {
-  display: flex;
-  justify-content: center; }
-
-.general_font_color {
-  color: #FFFFFF; }
-
 body {
-  background-color: black; }
+  background-color: black;
+  justify-content: center;
+  display: flex; }
 
-#header {
-  flex-direction: column; }
-  #header .heading__title {
-    font-size: 38px;
-    margin-top: 17px;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    width: 200px;
-    margin: 5px; }
-  #header .heading__title_container {
-    width: 237px;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    text-align: center; }
-  #header .heading__discribe {
-    font-size: 16px;
-    text-align: center; }
-  #header #menu {
-    color: #FFFFFF;
-    cursor: pointer;
-    margin: 20px 0; }
-    #header #menu li {
-      margin: 0px 20px;
-      list-style-type: none; }
-      #header #menu li:hover {
-        color: #BF9515; }
-  #header .menu__active {
-    color: #BF9515; }
+#container {
+  max-width: 840px; }
 
-#ImgContent {
-  height: 498px; }
-  #ImgContent > div:nth-child(1) {
-    width: 208px; }
-  #ImgContent > div:nth-child(2) {
-    width: 621px; }
-
-#detailImg .detailImg-item {
-  display: flex;
-  flex-direction: column;
-  width: 209px;
-  border-bottom: 1px solid;
-  border-color: #FFFFFF; }
-  #detailImg .detailImg-item > img {
-    width: 194px;
-    height: 144px; }
-    #detailImg .detailImg-item > img ~ div {
-      width: 180px; }
-
-#detailImg .detailTitle {
-  line-height: 20px;
-  text-align: left;
+#header .heading__title {
+  font-size: 38px;
+  margin-top: 17px;
   color: #FFFFFF;
-  margin: 20px 0; }
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  width: 200px;
+  margin: 5px; }
 
-#detailImg .detailReadMore {
+#header .heading__title_container {
+  width: 237px;
   display: flex;
-  color: #BF9515;
+  justify-content: center;
+  color: #FFFFFF;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  text-align: center; }
+
+#header .heading__title_style {
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  margin-top: 5px; }
+
+#header .heading__discribe {
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF; }
+
+#header #menu {
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin: 20px 0; }
+  #header #menu li {
+    margin: 0px 20px;
+    list-style-type: none; }
+    #header #menu li:hover {
+      color: #BF9515; }
+
+#header .menu__active {
+  color: #BF9515; }
+
+#img__content {
   margin-bottom: 20px;
-  font-size: 10px; }
+  display: flex; }
+  #img__content > div:nth-child(1) {
+    margin-right: 10px; }
+
+#detail__img {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px; }
+  #detail__img img {
+    margin-bottom: 10px; }
+  #detail__img .detailImg__item {
+    display: flex;
+    flex-direction: column; }
+  #detail__img .detail__title {
+    line-height: 20px;
+    color: #FFFFFF;
+    width: 200px;
+    margin-bottom: 20px; }
+  #detail__img .detail__readmore {
+    display: flex;
+    color: #BF9515;
+    font-size: 10px; }
 
 #reservations {
-  margin-top: 20px; }
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  margin-bottom: 10px; }
   #reservations .reservationsItemForm, #reservations select, #reservations button {
     width: 140px;
-    height: 40px; }
+    height: 40px;
+    margin: 0 1px;
+    color: #FFFFFF;
+    margin-bottom: 25px; }
   #reservations select {
-    background: transparent;
-    color: #FFFFFF; }
+    background: transparent; }
   #reservations button {
     background: #bf9515;
-    color: #FFFFFF;
     cursor: pointer; }
-  #reservations > div {
-    width: 590px;
-    flex-direction: column;
-    margin-right: 269px;
-    border-color: #FFFFFF;
-    border-bottom: solid;
-    border-top: solid;
-    border-width: 1px; }
-  #reservations .center {
-    color: #FFFFFF; }
-    #reservations .center > h2 {
-      padding-bottom: 17px; }
-  #reservations .selectBar {
+  #reservations .reservation__title {
+    width: 600px;
     display: flex;
-    justify-content: space-around;
-    align-content: stretch;
-    margin-bottom: 20px; }
+    justify-content: center;
+    color: #FFFFFF;
+    margin: 35px 0px;
+    font-size: 27px; }
 
 #footer {
-  line-height: 80px; }
-  #footer #footerContent {
-    width: 840px;
-    display: flex;
-    justify-content: space-around; }
-  #footer .footerLeftContentItem {
-    flex-grow: 1;
-    text-align: left;
-    display: flex;
-    flex-direction: column; }
-    #footer .footerLeftContentItem span {
-      line-height: 20px;
-      width: 100px; }
-  #footer .footerRightContent {
-    flex-grow: 3;
-    text-align: left;
+  display: flex; }
+  #footer .footer__leftContentItem {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid #FFFFFF; }
-  #footer .footerContentInfo {
-    line-height: 20px;
-    font-size: 10px; }
-  #footer .footerleft {
-    flex-grow: 3;
+    flex-basis: 210px;
+    margin-bottom: 10px; }
+  #footer .footer__rightContent {
     display: flex;
     flex-direction: column; }
-  #footer .footerLeftContent {
+  #footer .footer__contentInfo {
+    line-height: 20px;
+    font-size: 10px; }
+  #footer .footer__left {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; }
+  #footer .footer__leftContent {
     display: flex;
     color: #FFFFFF;
-    border-top: 1px solid #FFFFFF; }
+    margin-bottom: 20px; }
   #footer #socialNetwork {
-    align-self: flex-start;
-    color: #FFFFFF;
-    margin-top: 20px; }
-  #footer .footerTitle {
-    color: #BF9515; }
-  #footer .footerTitle__padding__bottom-10px {
+    color: #FFFFFF; }
+  #footer .footer__title {
+    color: #BF9515;
+    margin-bottom: 20px; }
+  #footer .padding__bottom {
     padding-bottom: 10px; }
   #footer .socialIcon {
-    display: flex;
-    padding-top: 15px; }
-  #footer .footerAdditionalInfo {
+    display: flex; }
+  #footer .icon {
+    margin: 0 5px;
+    cursor: pointer; }
+  #footer .footer__additionalInfo {
     line-height: 40px;
     font-size: 10px; }
