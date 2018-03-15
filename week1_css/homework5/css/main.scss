@@ -11,9 +11,10 @@ body {
     
 }
 #container {
-    max-width: 840px;
+    width: 840px;
 }
 #header {
+    margin-top: 10px;
     .heading__title {
         font-size: 38px;
         margin-top: 17px;
@@ -40,7 +41,6 @@ body {
         display: flex;
         justify-content: center;
         color:$general_font_color;
-        margin-top:5px;
     }
     .heading__discribe {
         font-size: 16px;
@@ -68,8 +68,12 @@ body {
 #img__content{
     margin-bottom: 20px;
     display: flex;
-    >div:nth-child(1){
+    >img:nth-child(1){
         margin-right: 10px;
+        flex-grow: 1;
+    }
+    >img:nth-child(2){
+        flex-grow: 2;
     }
 }
 #detail__img{
@@ -82,11 +86,11 @@ body {
     .detailImg__item{
         display:flex;
         flex-direction:column;
+        margin: 0 5px;
     }
     .detail__title {
         line-height:20px;
         color: $general_font_color;
-        width: 200px;
         margin-bottom: 20px;
     }
     .detail__readmore{
@@ -117,12 +121,16 @@ body {
         background:rgb(191, 149, 21);
         cursor: pointer;
     }
+
+.reservation__area {
+    width: 600px;
+    margin-top: 25px;
+}
     .reservation__title {
-        width: 600px;
         display: flex;
         justify-content: center;
         color:$general_font_color;
-        margin: 35px 0px;
+        margin-bottom: 35px;
         font-size: 27px
     }
 }
@@ -131,12 +139,9 @@ body {
     .footer__leftContentItem{
         display: flex;
         flex-direction: column;
+        flex-grow: 1;
         flex-basis: 210px;
         margin-bottom: 10px;
-    }
-    .footer__rightContent {
-        display: flex;
-        flex-direction: column;
     }
     .footer__contentInfo {
         line-height: 20px;
@@ -145,7 +150,12 @@ body {
     .footer__left {
         display:flex;
         flex-direction: column;
-        flex-grow: 1;
+        flex-grow: 10;
+    }
+    .footer__right {
+        display: flex;
+        flex-direction: column;
+        flex-grow:1;
     }
     .footer__leftContent {
         display: flex;
@@ -159,8 +169,8 @@ body {
         color:$important_font_color;
         margin-bottom: 20px;
     }
-    .padding__bottom {
-        padding-bottom: 10px;
+    .margin__bottom {
+        margin-bottom: 10px;
     } 
     .socialIcon{
         display: flex;
