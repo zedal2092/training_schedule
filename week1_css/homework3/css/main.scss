@@ -1,59 +1,471 @@
 
-$background-color:#FFFFFF;
+$content__background_color:#FFFFFF;
 
 
-@mixin header__bar_color ($color) {
+@mixin bar-color ($color) {
     background-color: $color;
-    width: 160px;
-    height: 10px;
+    height: 5px;
+    flex-grow: 1;
 }
 
-.flex__content-center {
+
+body {
     display: flex;
     justify-content: center;
+    background-color: rgb(243, 243, 243);
+}
+
+#container {
+    width: 980px;
+    color: #7b7b7b;
 }
 
 #header {
-    background-color: $background-color;
-    @extend .flex__content-center;
-    flex-wrap: wrap;
-    // flex-direction: column;
+    background-color: $content__background_color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    .header__upper_line { 
+    padding-bottom: 35px;
+    margin-bottom: 10px;
+    img {
+        margin-bottom: 6px;
+    }
+    .upper-line { 
         display: flex;
-        align-items: stretch;
-        width: 840px;
-
-        .first__bar_color {
-            @include header__bar_color(red)
+        margin-bottom: 28px;
+        .first {
+            @include bar-color(red)
         }
-        .second__bar_color {
-            @include header__bar_color(green)
+        .second {
+            @include bar-color(green)
         }
-        .third__bar_color {
-            @include header__bar_color(wheat)
+        .third {
+            @include bar-color(wheat)
         }
-        .fourth__bar_color {
-            @include header__bar_color(red)
+        .fourth {
+            @include bar-color(red)
         }
-        .fifth__bar_color {
-            @include header__bar_color(green)
+        .fifth {
+            @include bar-color(green)
         }
-        .sixth__bar_color {
-            @include header__bar_color(wheat)
+        .sixth {
+            @include bar-color(wheat)
+        }
+        .seventh{
+            @include bar-color(blue)
         }
     }
 
-    .header__content {
-        @extend .flex__content-center;
-        width: 840px;
-        height: 160px;
-        .header__left_content {
+    .content {
+        display: flex;
+        flex-grow: 1;
+        .title {
+            font-size: 30px;
+            :nth-child(3) {
+                color: red;
+                padding-left: 7px;
+                border-left:3px solid ;
+            }
+        }
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            flex-grow: 1;
+            line-height: 32px;
+            align-items: flex-end;
+            .active {
+                color:#11a2ae;
+            }
+
+            li:hover {
+                color:#11a2ae;
+            }
+            a {
+                color: #7b7b7b;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+#content {
+    background-color: #FFFFFF;
+    padding-bottom: 20px;
+    .plus-btn {
+        font-size: 25px;
+        align-self: center;
+    }
+    
+    #submain {
+        display: flex;
+        background: {
+            color: $content__background_color;
+            image: url(../images/comma.png);
+            repeat:no-repeat;
+            position: 0 50px;
+        };
+        .summary{
+            font-size: 50px;
+            font-weight: bold;
+            color: #de5454;
+            line-height: 120%;
+            padding: 50px 234px;
+        }
+    }
+
+    #main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1.3fr 1.1fr 1.1fr;
+        grid-template-areas: 
+            "about about classes classes"
             
-        }
-        .header__menu {
+            "corporate woman lab lab"
 
+            "corporate schedule schedule exam-prepare"
+
+            "video video house exam-prepare";
+        grid-gap: 20px;
+        .icon {
+            font-size: 46px;
+        }
+        .icon-dark {
+            color: #000;
+            opacity: 0.3;
+        }
+        .about {
+            grid-area: about;
+            background-color: #FFFFFF;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 20px;
+            .about-left {
+                border-right: 1px solid ;
+                padding: 0 15px ;
+                p {
+                    margin: 10px 0 0 0;
+                    color: #999;
+                }
+            }
+            img {
+                margin-bottom: 10px;
+            }
+            .about-right {
+                padding: 0 15px ;
+                .note-title {
+                    font-weight: bold;
+                    margin-bottom: 15px;
+                }
+                .context {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .classes {
+            grid-area: classes;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color : #de5454;
+            margin-bottom: 20px;
+            .classes-left{
+                border-right: 1px solid;
+                padding:0 15px;
+                div {
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 25px;
+                    margin-bottom: 20px;
+                }
+            }
+            .classes-right {
+                padding: 0 15px ;
+                .note-classes {
+                    font-weight: bold;
+                    margin-bottom: 15px;
+                }
+                .classes-context {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    
+        .corporate {
+            grid-area: corporate;
+            background-color: #11a2ae;
+            display: grid;
+            grid-template-rows: 20% 35% 7% 23% 10%;
+            padding: 0 15px;
+            color:#FFFFFF;
+            .briefcase {
+                padding-top: 5px;
+                align-self: center;
+            }
+            .summary {
+                font-size:28px;
+                line-height: 1.1;
+            }
+            .title {
+                font-weight: bold;
+            }
+            .context {
+                margin-bottom: 20px;
+                line-height: 110%;
+            }
+        }
+
+        .woman {
+            grid-area: woman;
+            .relative {
+                position: relative;
+            }
+            img {
+                margin-top: -10px;
+            }
+            p {
+                margin-top: 4px;
+            }
+            .ribbon {
+                color: #fff;
+                position: absolute;
+                background: #de5454;
+                height: 27px;
+                padding: 10px 15px;
+                opacity: 0.9;
+                z-index: 1;
+                width: 231px;
+                left: -15px;
+                top: 184px;
+                text-align: center;
+            }
+
+            .ribbon:before {
+                content: "";
+                position: absolute;
+                border-style: solid;
+                border-color: #8D6E63 transparent;
+                bottom: -15px;
+                left: 0;
+                border-width: 16px 0 0 16px;
+            }
+            .ribbon:after {
+                content: "";
+                position: absolute;
+                border-style: solid;
+                border-color: #8D6E63 transparent;
+                bottom: -16px;
+                right: 0;
+                border-width: 16px 16px 0 0;
+            }
+        }
+        
+        .lab{
+            grid-area: lab;
+            background-color: #7b7b7b;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .lab-left {
+                color: #FFFFFF;
+                padding: 37px 22px;
+                .Beaker {
+                    margin-bottom: 15px;
+                }
+                .context {
+                    font-size: 30px;
+                }
+            }
+            .lab-right {
+                color: #FFFFFF;
+                .container {
+                    padding: 6px 28px 16px 22px;
+                    border-left: 1px solid;
+                    margin-top: 39px;
+                }
+                .title {
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                .context {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .schedule {
+            grid-area: schedule;
+            .title {
+                background-color: #de5454;
+                color: #FFFFFF;
+                font-size: 22px;
+                padding: 10px 0 10px 10px;
+            }
+            .list {
+                padding: 20px;
+            }
+            span {
+                font-weight: bold;
+                font-size: 35px;
+                color: #a09e9e;
+                margin:0 10px;
+            }
+            li {
+                font-size: 30px;
+                color: #a09e9e;
+                margin: 10px 0;
+            }
+            li:before{
+                content: "•";
+                color: #de5454;
+            };
+        }
+    
+        .exam-prepare {
+            grid-area: exam-prepare;
+            background-color: #11a2ae;
+            display: grid;
+            grid-template-rows: 20% 35% 7% 23% 10%;
+            padding: 0 15px;
+            color:#FFFFFF;
+            .rocket {
+                padding-top: 5px;
+                align-self: center;
+            }
+            .summary {
+                font-size:28px;
+                line-height: 1.2;
+            }
+            .title {
+                font-weight: bold;
+            }
+
+            .context {
+                margin-bottom: 20px;
+                line-height: 110%;
+            }
+            .plus-btn {
+                font-size: 25px;
+                align-self: center;
+            }
+        }
+        .video {
+            grid-area: video;
+        }
+        .house {
+            grid-area: house;
         }
     }
+}
 
+#footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: 
+    "contact email join-us"
+    "info info info"; 
+    grid-gap: 10px;
+    height: 300px;
+    .contact {
+        grid-area: contact;
+        display:flex;
+        flex-direction: column;
+        padding:0 20px;
+        margin: 20px 0;
+        border-right: 2px solid #11a2ae;
+        .lingo {
+            color: #11a2ae;
+            margin: 20px 0;
+        }
+        span {
+            border-right: 2px solid;
+            margin-right: 10px;
+        }
+        .text {
+            margin-bottom: 10px;
+        }
+        
+    }
+    .email {
+        grid-area: email;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        margin: 20px 0;
+       
+        .content-left{
+            display: flex;
+            flex-direction: column;
+            input {
+                height: 21%;
+                margin-bottom: 5px;
+                margin-left: 5px;
+                border-radius: 8px;
+                border: 0;
+            }
+        }
+        .content-right {
+            display: flex;
+            flex-direction: column;
+            align-content: stretch;
+            textarea {
+                height: 87%;
+                margin-right: 5px;
+                border-radius: 8px;
+                border: 0;
+                margin-left: 5px;
+                resize : none;
+            }
+            button {
+                width: 25%;
+                height: 25%;
+                background-color: #11a2ae;
+                border-radius: 8px;
+                color: #FFFFFF;
+                align-self: flex-end;
+                margin-top: 5px;
+                border: 0;
+            }
+        }
+    }
+    .join-us {
+        grid-area: join-us;
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+        margin: 20px 0;
+        border-left: 2px solid #11a2ae;
+        p {
+            margin: 18px 0;
+            // align-self: center;
+        }
+        .social-icon {
+            display: flex;
+            img {
+                margin: 0 7px;
+            }
+        }
+    }
+    .info {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        .title {
+            align-self: center;
+            display: flex;
+            margin-bottom: 15px;
+            a {
+                color: #7b7b7b;
+                margin: 0 5px;
+                text-decoration: none;
+            }
+            .active {
+                color:#11a2ae;
+            }
+        }
+        .partner {
+            align-self: center;
+        }
+    }
+    
 }
