@@ -1,13 +1,12 @@
 
-$content__background_color:#FFFFFF;
-
+$main_color: #7b7b7b;
+$has_background_color:#FFFFFF;
 
 @mixin bar-color ($color) {
     background-color: $color;
     height: 5px;
     flex-grow: 1;
 }
-
 
 body {
     display: flex;
@@ -17,11 +16,11 @@ body {
 
 #container {
     width: 980px;
-    color: #7b7b7b;
+    color: $main_color;
 }
 
 #header {
-    background-color: $content__background_color;
+    background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,7 +62,7 @@ body {
         .title {
             font-size: 30px;
             :nth-child(3) {
-                color: red;
+                color: #de5454;
                 padding-left: 7px;
                 border-left:3px solid ;
             }
@@ -77,13 +76,12 @@ body {
             .active {
                 color:#11a2ae;
             }
-
-            li:hover {
-                color:#11a2ae;
-            }
             a {
-                color: #7b7b7b;
+                color: $main_color;
                 text-decoration: none;
+            }
+            a:hover {
+                color:#11a2ae;
             }
         }
     }
@@ -100,7 +98,7 @@ body {
     #submain {
         display: flex;
         background: {
-            color: $content__background_color;
+            color: $has_background_color;
             image: url(../images/comma.png);
             repeat:no-repeat;
             position: 0 50px;
@@ -144,8 +142,9 @@ body {
                 border-right: 1px solid ;
                 padding: 0 15px ;
                 p {
-                    margin: 10px 0 0 0;
+                    margin: 10px 0 20px 0;
                     color: #999;
+                    font-size: 23px;
                 }
             }
             img {
@@ -175,8 +174,9 @@ body {
                     margin-bottom: 10px;
                 }
                 p {
-                    font-size: 25px;
+                    font-size: 22px;
                     margin-bottom: 20px;
+                    line-height: 30px;
                 }
             }
             .classes-right {
@@ -197,7 +197,7 @@ body {
             display: grid;
             grid-template-rows: 20% 35% 7% 23% 10%;
             padding: 0 15px;
-            color:#FFFFFF;
+            color: $has_background_color;
             .briefcase {
                 padding-top: 5px;
                 align-self: center;
@@ -266,7 +266,7 @@ body {
             display: grid;
             grid-template-columns: 1fr 1fr;
             .lab-left {
-                color: #FFFFFF;
+                color: $has_background_color;
                 padding: 37px 22px;
                 .Beaker {
                     margin-bottom: 15px;
@@ -276,7 +276,7 @@ body {
                 }
             }
             .lab-right {
-                color: #FFFFFF;
+                color: $has_background_color;
                 .container {
                     padding: 6px 28px 16px 22px;
                     border-left: 1px solid;
@@ -296,7 +296,7 @@ body {
             grid-area: schedule;
             .title {
                 background-color: #de5454;
-                color: #FFFFFF;
+                color: $has_background_color;
                 font-size: 22px;
                 padding: 10px 0 10px 10px;
             }
@@ -313,11 +313,18 @@ body {
                 font-size: 30px;
                 color: #a09e9e;
                 margin: 10px 0;
+                display: flex;
+                div {
+                    padding-left: 12px;
+                    border-left: 2px solid;
+                }
+
             }
             li:before{
                 content: "•";
                 color: #de5454;
             };
+            
         }
     
         .exam-prepare {
@@ -326,7 +333,7 @@ body {
             display: grid;
             grid-template-rows: 20% 35% 7% 23% 10%;
             padding: 0 15px;
-            color:#FFFFFF;
+            color:$has_background_color;
             .rocket {
                 padding-top: 5px;
                 align-self: center;
@@ -375,14 +382,18 @@ body {
         border-right: 2px solid #11a2ae;
         .lingo {
             color: #11a2ae;
-            margin: 20px 0;
+            margin: 25px 0;
         }
         span {
             border-right: 2px solid;
             margin-right: 10px;
         }
         .text {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .tel {
+            font-size: 13px;
         }
         
     }
@@ -421,7 +432,7 @@ body {
                 height: 25%;
                 background-color: #11a2ae;
                 border-radius: 8px;
-                color: #FFFFFF;
+                color: $has_background_color;
                 align-self: flex-end;
                 margin-top: 5px;
                 border: 0;
@@ -455,9 +466,12 @@ body {
             display: flex;
             margin-bottom: 15px;
             a {
-                color: #7b7b7b;
+                color: $main_color;
                 margin: 0 5px;
                 text-decoration: none;
+            }
+            a:hover {
+                color:#11a2ae;
             }
             .active {
                 color:#11a2ae;

@@ -54,7 +54,7 @@ body {
     #header .content .title {
       font-size: 30px; }
       #header .content .title :nth-child(3) {
-        color: red;
+        color: #de5454;
         padding-left: 7px;
         border-left: 3px solid; }
     #header .content .menu {
@@ -65,11 +65,11 @@ body {
       align-items: flex-end; }
       #header .content .menu .active {
         color: #11a2ae; }
-      #header .content .menu li:hover {
-        color: #11a2ae; }
       #header .content .menu a {
         color: #7b7b7b;
         text-decoration: none; }
+      #header .content .menu a:hover {
+        color: #11a2ae; }
 
 #content {
   background-color: #FFFFFF;
@@ -110,8 +110,9 @@ body {
         border-right: 1px solid;
         padding: 0 15px; }
         #content #main .about .about-left p {
-          margin: 10px 0 0 0;
-          color: #999; }
+          margin: 10px 0 20px 0;
+          color: #999;
+          font-size: 23px; }
       #content #main .about img {
         margin-bottom: 10px; }
       #content #main .about .about-right {
@@ -133,8 +134,9 @@ body {
         #content #main .classes .classes-left div {
           margin-bottom: 10px; }
         #content #main .classes .classes-left p {
-          font-size: 25px;
-          margin-bottom: 20px; }
+          font-size: 22px;
+          margin-bottom: 20px;
+          line-height: 30px; }
       #content #main .classes .classes-right {
         padding: 0 15px; }
         #content #main .classes .classes-right .note-classes {
@@ -236,7 +238,11 @@ body {
       #content #main .schedule li {
         font-size: 30px;
         color: #a09e9e;
-        margin: 10px 0; }
+        margin: 10px 0;
+        display: flex; }
+        #content #main .schedule li div {
+          padding-left: 12px;
+          border-left: 2px solid; }
       #content #main .schedule li:before {
         content: "•";
         color: #de5454; }
@@ -282,12 +288,15 @@ body {
     border-right: 2px solid #11a2ae; }
     #footer .contact .lingo {
       color: #11a2ae;
-      margin: 20px 0; }
+      margin: 25px 0; }
     #footer .contact span {
       border-right: 2px solid;
       margin-right: 10px; }
     #footer .contact .text {
-      margin-bottom: 10px; }
+      margin-bottom: 20px;
+      font-size: 13px; }
+    #footer .contact .tel {
+      font-size: 13px; }
   #footer .email {
     grid-area: email;
     display: grid;
@@ -348,6 +357,8 @@ body {
         color: #7b7b7b;
         margin: 0 5px;
         text-decoration: none; }
+      #footer .info .title a:hover {
+        color: #11a2ae; }
       #footer .info .title .active {
         color: #11a2ae; }
     #footer .info .partner {
