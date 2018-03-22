@@ -8,6 +8,50 @@ $has_background_color:#FFFFFF;
     flex-grow: 1;
 }
 
+@mixin left-part ($border-right , $padding , $margin, $color , $font-size){
+    border-right: $border-right;
+    padding: $padding;
+    p {
+        margin: $margin;
+        color: $color;
+        font-size: $font-size;
+    }
+}
+
+@mixin right-part ($padding,$note-title-mb,$context_mb){
+    padding: $padding ;
+    .note-title {
+        font-weight: bold;
+        margin-bottom: $note-title-mb;
+    }
+    .context {
+        margin-bottom: $context_mb;
+    }
+}
+
+.main-sidebar {
+    background-color: #11a2ae;
+    padding: 0 15px;
+    color: $has_background_color;
+    .icon-side {
+        padding: 30px 0;
+        align-self: center;
+    }
+    .summary {
+        font-size:28px;
+        line-height: 1.1;
+        margin-bottom: 30px;
+    }
+    .title {
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .context {
+        margin-bottom: 40px;
+        line-height: 110%;
+    }
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -24,54 +68,48 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    padding-bottom: 35px;
     margin-bottom: 10px;
     img {
-        margin-bottom: 6px;
+        margin-bottom: -9px;
     }
     .upper-line { 
         display: flex;
-        margin-bottom: 28px;
-        .first {
-            @include bar-color(red)
+        :nth-child(3n+1) {
+            @include bar-color(#a09e9e);
         }
-        .second {
-            @include bar-color(green)
+        :nth-child(3n+2) {
+            @include bar-color(#ef9a9a);
         }
-        .third {
-            @include bar-color(wheat)
-        }
-        .fourth {
-            @include bar-color(red)
-        }
-        .fifth {
-            @include bar-color(green)
-        }
-        .sixth {
-            @include bar-color(wheat)
-        }
-        .seventh{
-            @include bar-color(blue)
+        :nth-child(3n+3) {
+            @include bar-color(#66c2c9);
         }
     }
 
     .content {
         display: flex;
         flex-grow: 1;
+        padding:40px 0;
+
+        background: {
+            image: url(../images/logo_deco.png);
+            repeat:no-repeat;
+            position: 14px 22px;
+        };
         .title {
             font-size: 30px;
-            :nth-child(3) {
+            padding-left: 75px;;
+            :nth-child(2) {
                 color: #de5454;
                 padding-left: 7px;
                 border-left:3px solid ;
             }
+
         }
         .menu {
             display: flex;
             justify-content: space-around;
             flex-grow: 1;
-            line-height: 32px;
+            line-height: 20px;
             align-items: flex-end;
             .active {
                 color:#11a2ae;
@@ -97,6 +135,7 @@ body {
     
     #submain {
         display: flex;
+        flex-direction: columns;
         background: {
             color: $has_background_color;
             image: url(../images/comma.png);
@@ -109,6 +148,10 @@ body {
             color: #de5454;
             line-height: 120%;
             padding: 50px 234px;
+        }
+        .author {
+            font-size: 15px;
+            color: #a09e9e;
         }
     }
 
@@ -139,18 +182,26 @@ body {
             grid-template-columns: 1fr 1fr;
             margin-bottom: 20px;
             .about-left {
-                border-right: 1px solid ;
-                padding: 0 15px ;
-                p {
-                    margin: 10px 0 20px 0;
-                    color: #999;
-                    font-size: 23px;
-                }
+                @include left-part(1px solid , 0 15px , 15px 0 20px 0 , #999 , 23px);
             }
             img {
                 margin-bottom: 10px;
             }
             .about-right {
+                @include right-part(0 15px, 15px, 10px);
+            }
+        }
+        .classes {
+            grid-area: classes;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color : #de5454;
+            margin-bottom: 20px;
+            .classes-left{
+                @include left-part(1px solid , 0 15px , 15px 0 20px 0 , #de5454 , 23px);
+            }
+            .classes-right {
+                @include right-part(0 15px, 15px, 10px);
                 padding: 0 15px ;
                 .note-title {
                     font-weight: bold;
@@ -161,58 +212,10 @@ body {
                 }
             }
         }
-        .classes {
-            grid-area: classes;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            color : #de5454;
-            margin-bottom: 20px;
-            .classes-left{
-                border-right: 1px solid;
-                padding:0 15px;
-                div {
-                    margin-bottom: 10px;
-                }
-                p {
-                    font-size: 22px;
-                    margin-bottom: 20px;
-                    line-height: 30px;
-                }
-            }
-            .classes-right {
-                padding: 0 15px ;
-                .note-classes {
-                    font-weight: bold;
-                    margin-bottom: 15px;
-                }
-                .classes-context {
-                    margin-bottom: 10px;
-                }
-            }
-        }
     
         .corporate {
+            @extend .main-sidebar;
             grid-area: corporate;
-            background-color: #11a2ae;
-            display: grid;
-            grid-template-rows: 20% 35% 7% 23% 10%;
-            padding: 0 15px;
-            color: $has_background_color;
-            .briefcase {
-                padding-top: 5px;
-                align-self: center;
-            }
-            .summary {
-                font-size:28px;
-                line-height: 1.1;
-            }
-            .title {
-                font-weight: bold;
-            }
-            .context {
-                margin-bottom: 20px;
-                line-height: 110%;
-            }
         }
 
         .woman {
@@ -266,28 +269,16 @@ body {
             display: grid;
             grid-template-columns: 1fr 1fr;
             .lab-left {
-                color: $has_background_color;
+                @include left-part(1px solid , 0 15px , 15px 0 20px 0 , $has_background_color , 26px);
                 padding: 37px 22px;
-                .Beaker {
-                    margin-bottom: 15px;
-                }
-                .context {
-                    font-size: 30px;
-                }
             }
             .lab-right {
+                @include right-part(0 15px, 15px, 10px);;
                 color: $has_background_color;
                 .container {
                     padding: 6px 28px 16px 22px;
                     border-left: 1px solid;
                     margin-top: 39px;
-                }
-                .title {
-                    font-weight: bold;
-                    margin-bottom: 10px;
-                }
-                .context {
-                    margin-bottom: 10px;
                 }
             }
         }
@@ -329,31 +320,7 @@ body {
     
         .exam-prepare {
             grid-area: exam-prepare;
-            background-color: #11a2ae;
-            display: grid;
-            grid-template-rows: 20% 35% 7% 23% 10%;
-            padding: 0 15px;
-            color:$has_background_color;
-            .rocket {
-                padding-top: 5px;
-                align-self: center;
-            }
-            .summary {
-                font-size:28px;
-                line-height: 1.2;
-            }
-            .title {
-                font-weight: bold;
-            }
-
-            .context {
-                margin-bottom: 20px;
-                line-height: 110%;
-            }
-            .plus-btn {
-                font-size: 25px;
-                align-self: center;
-            }
+            @extend .main-sidebar; 
         }
         .video {
             grid-area: video;
