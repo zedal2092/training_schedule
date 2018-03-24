@@ -1,19 +1,36 @@
 @charset "UTF-8";
-.main-sidebar, #content #main .corporate, #content #main .exam-prepare {
+.icon-title, #content #main .about .about-left, #content #main .classes .classes-left, #content #main .corporate .up-part, #content #main .lab .lab-left, #content #main .exam-prepare .up-part {
+  border-right: 1px solid;
+  margin: 37px 5px 0px 25px; }
+  .icon-title p, #content #main .about .about-left p, #content #main .classes .classes-left p, #content #main .corporate .up-part p, #content #main .lab .lab-left p, #content #main .exam-prepare .up-part p {
+    margin: 15px 0 20px 0;
+    font-size: 22px;
+    line-height: 28px; }
+
+.discribe, #content #main .about .about-right, #content #main .classes .classes-right, #content #main .corporate .bottom-part, #content #main .lab .lab-right, #content #main .exam-prepare .bottom-part {
+  padding: 0 20px;
+  margin-top: 30px; }
+  .discribe .note-title, #content #main .about .about-right .note-title, #content #main .classes .classes-right .note-title, #content #main .corporate .bottom-part .note-title, #content #main .lab .lab-right .note-title, #content #main .exam-prepare .bottom-part .note-title {
+    font-weight: bold;
+    margin-bottom: 15px; }
+  .discribe .context, #content #main .about .about-right .context, #content #main .classes .classes-right .context, #content #main .corporate .bottom-part .context, #content #main .lab .lab-right .context, #content #main .exam-prepare .bottom-part .context {
+    margin-bottom: 20px; }
+
+.main-sidebar {
   background-color: #11a2ae;
   padding: 0 15px;
   color: #FFFFFF; }
-  .main-sidebar .icon-side, #content #main .corporate .icon-side, #content #main .exam-prepare .icon-side {
+  .main-sidebar .icon-side {
     padding: 30px 0;
     align-self: center; }
-  .main-sidebar .summary, #content #main .corporate .summary, #content #main .exam-prepare .summary {
+  .main-sidebar .summary {
     font-size: 28px;
     line-height: 1.1;
     margin-bottom: 30px; }
-  .main-sidebar .title, #content #main .corporate .title, #content #main .exam-prepare .title {
+  .main-sidebar .title {
     font-weight: bold;
     margin-bottom: 15px; }
-  .main-sidebar .context, #content #main .corporate .context, #content #main .exam-prepare .context {
+  .main-sidebar .context {
     margin-bottom: 40px;
     line-height: 110%; }
 
@@ -116,21 +133,7 @@ body {
       grid-template-columns: 1fr 1fr;
       margin-bottom: 20px; }
       #content #main .about .about-left {
-        border-right: 1px solid;
-        padding: 0 15px; }
-        #content #main .about .about-left p {
-          margin: 15px 0 20px 0;
-          color: #999;
-          font-size: 23px; }
-      #content #main .about img {
-        margin-bottom: 10px; }
-      #content #main .about .about-right {
-        padding: 0 15px; }
-        #content #main .about .about-right .note-title {
-          font-weight: bold;
-          margin-bottom: 15px; }
-        #content #main .about .about-right .context {
-          margin-bottom: 10px; }
+        color: #999; }
     #content #main .classes {
       grid-area: classes;
       display: grid;
@@ -138,27 +141,16 @@ body {
       color: #de5454;
       margin-bottom: 20px; }
       #content #main .classes .classes-left {
-        border-right: 1px solid;
-        padding: 0 15px; }
-        #content #main .classes .classes-left p {
-          margin: 15px 0 20px 0;
-          color: #de5454;
-          font-size: 23px; }
-      #content #main .classes .classes-right {
-        padding: 0 15px;
-        padding: 0 15px; }
-        #content #main .classes .classes-right .note-title {
-          font-weight: bold;
-          margin-bottom: 15px; }
-        #content #main .classes .classes-right .context {
-          margin-bottom: 10px; }
-        #content #main .classes .classes-right .note-title {
-          font-weight: bold;
-          margin-bottom: 15px; }
-        #content #main .classes .classes-right .context {
-          margin-bottom: 10px; }
+        color: #de5454; }
     #content #main .corporate {
-      grid-area: corporate; }
+      grid-area: corporate;
+      background-color: #11a2ae;
+      color: #FFFFFF;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      padding-right: 10px; }
+      #content #main .corporate .up-part {
+        border: 0px; }
     #content #main .woman {
       grid-area: woman; }
       #content #main .woman .relative {
@@ -201,25 +193,11 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr; }
       #content #main .lab .lab-left {
-        border-right: 1px solid;
-        padding: 0 15px;
-        padding: 37px 22px; }
-        #content #main .lab .lab-left p {
-          margin: 15px 0 20px 0;
-          color: #FFFFFF;
-          font-size: 26px; }
-      #content #main .lab .lab-right {
-        padding: 0 15px;
+        margin-bottom: 70px;
         color: #FFFFFF; }
-        #content #main .lab .lab-right .note-title {
-          font-weight: bold;
-          margin-bottom: 15px; }
-        #content #main .lab .lab-right .context {
-          margin-bottom: 10px; }
-        #content #main .lab .lab-right .container {
-          padding: 6px 28px 16px 22px;
-          border-left: 1px solid;
-          margin-top: 39px; }
+      #content #main .lab .lab-right {
+        margin-right: 35px;
+        color: #FFFFFF; }
     #content #main .schedule {
       grid-area: schedule; }
       #content #main .schedule .title {
@@ -246,11 +224,18 @@ body {
         content: "•";
         color: #de5454; }
     #content #main .exam-prepare {
-      grid-area: exam-prepare; }
-    #content #main .video {
-      grid-area: video; }
-    #content #main .house {
-      grid-area: house; }
+      grid-area: exam-prepare;
+      background-color: #11a2ae;
+      color: #FFFFFF;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      padding-right: 10px; }
+      #content #main .exam-prepare .up-part {
+        border: 0px; }
+  #content .video {
+    grid-area: video; }
+  #content .house {
+    grid-area: house; }
 
 #footer {
   display: grid;

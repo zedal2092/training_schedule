@@ -8,25 +8,28 @@ $has_background_color:#FFFFFF;
     flex-grow: 1;
 }
 
-@mixin left-part ($border-right , $padding , $margin, $color , $font-size){
-    border-right: $border-right;
-    padding: $padding;
+.icon-title {
+    border-right: 1px solid;
+
+    margin: 37px 5px 0px 25px;
     p {
-        margin: $margin;
-        color: $color;
-        font-size: $font-size;
+        margin: 15px 0 20px 0;
+        font-size: 22px;
+        line-height: 28px;
     }
 }
 
-@mixin right-part ($padding,$note-title-mb,$context_mb){
-    padding: $padding ;
+.discribe {
+    padding: 0 20px ;
+    margin-top: 30px;
     .note-title {
         font-weight: bold;
-        margin-bottom: $note-title-mb;
+        margin-bottom: 15px;
     }
     .context {
-        margin-bottom: $context_mb;
+        margin-bottom: 20px;
     }
+    
 }
 
 .main-sidebar {
@@ -182,13 +185,11 @@ body {
             grid-template-columns: 1fr 1fr;
             margin-bottom: 20px;
             .about-left {
-                @include left-part(1px solid , 0 15px , 15px 0 20px 0 , #999 , 23px);
-            }
-            img {
-                margin-bottom: 10px;
+                color: #999;
+                @extend .icon-title;
             }
             .about-right {
-                @include right-part(0 15px, 15px, 10px);
+                @extend .discribe;
             }
         }
         .classes {
@@ -198,24 +199,28 @@ body {
             color : #de5454;
             margin-bottom: 20px;
             .classes-left{
-                @include left-part(1px solid , 0 15px , 15px 0 20px 0 , #de5454 , 23px);
+                @extend .icon-title;
+                color: #de5454;
             }
             .classes-right {
-                @include right-part(0 15px, 15px, 10px);
-                padding: 0 15px ;
-                .note-title {
-                    font-weight: bold;
-                    margin-bottom: 15px;
-                }
-                .context {
-                    margin-bottom: 10px;
-                }
+                @extend .discribe;
             }
         }
     
         .corporate {
-            @extend .main-sidebar;
             grid-area: corporate;
+            background-color: #11a2ae;
+            color: $has_background_color;
+            display: grid;
+            grid-template-rows:1fr 1fr; 
+            padding-right: 10px;
+            .up-part {
+                @extend .icon-title;
+                border: 0px;
+            }
+            .bottom-part {
+                @extend .discribe;
+            }
         }
 
         .woman {
@@ -269,17 +274,14 @@ body {
             display: grid;
             grid-template-columns: 1fr 1fr;
             .lab-left {
-                @include left-part(1px solid , 0 15px , 15px 0 20px 0 , $has_background_color , 26px);
-                padding: 37px 22px;
+                @extend .icon-title;
+                margin-bottom: 70px;
+                color: $has_background_color;
             }
             .lab-right {
-                @include right-part(0 15px, 15px, 10px);;
+                @extend .discribe;
+                margin-right: 35px;
                 color: $has_background_color;
-                .container {
-                    padding: 6px 28px 16px 22px;
-                    border-left: 1px solid;
-                    margin-top: 39px;
-                }
             }
         }
 
@@ -320,7 +322,19 @@ body {
     
         .exam-prepare {
             grid-area: exam-prepare;
-            @extend .main-sidebar; 
+            background-color: #11a2ae;
+            color: $has_background_color;
+            display: grid;
+            grid-template-rows:1fr 1fr; 
+            padding-right: 10px;
+            .up-part {
+                @extend .icon-title;
+                border: 0px;
+            }
+            .bottom-part {
+                @extend .discribe;
+                }
+            }
         }
         .video {
             grid-area: video;
@@ -328,7 +342,7 @@ body {
         .house {
             grid-area: house;
         }
-    }
+    
 }
 
 #footer {
@@ -415,7 +429,6 @@ body {
         border-left: 2px solid #11a2ae;
         p {
             margin: 18px 0;
-            // align-self: center;
         }
         .social-icon {
             display: flex;
