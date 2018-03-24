@@ -3,13 +3,13 @@
   border-right: 1px solid;
   margin: 37px 5px 0px 25px; }
   .icon-title p, #content #main .about .about-left p, #content #main .classes .classes-left p, #content #main .corporate .up-part p, #content #main .lab .lab-left p, #content #main .exam-prepare .up-part p {
-    margin: 15px 0 20px 0;
+    margin: 15px 0 0 0;
     font-size: 22px;
-    line-height: 28px; }
+    line-height: 30px; }
 
 .discribe, #content #main .about .about-right, #content #main .classes .classes-right, #content #main .corporate .bottom-part, #content #main .lab .lab-right, #content #main .exam-prepare .bottom-part {
   padding: 0 20px;
-  margin-top: 30px; }
+  margin-top: 40px; }
   .discribe .note-title, #content #main .about .about-right .note-title, #content #main .classes .classes-right .note-title, #content #main .corporate .bottom-part .note-title, #content #main .lab .lab-right .note-title, #content #main .exam-prepare .bottom-part .note-title {
     font-weight: bold;
     margin-bottom: 15px; }
@@ -118,7 +118,7 @@ body {
   #content #main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1.3fr 1.1fr 1.1fr;
+    grid-template-rows: 1fr 1.3fr 0.9fr 1.1fr;
     grid-template-areas: "about about classes classes"  "corporate woman lab lab"  "corporate schedule schedule exam-prepare"  "video video house exam-prepare";
     grid-gap: 20px; }
     #content #main .icon {
@@ -206,7 +206,7 @@ body {
         font-size: 22px;
         padding: 10px 0 10px 10px; }
       #content #main .schedule .list {
-        padding: 20px; }
+        padding: 20px 20px 0 20px; }
       #content #main .schedule span {
         font-weight: bold;
         font-size: 35px;
