@@ -1,6 +1,6 @@
-
-
-
+.container-width {
+    width:980px;
+}
 
 .menu_active {
     background: linear-gradient(#19aca8,#c8e09e,transparent 90%);
@@ -21,7 +21,7 @@ header {
     margin-bottom: 20px;
     .container {
         display: flex;
-        width:980px;
+        @extend .container-width;
         .img-space {
             flex-grow: 2;
         }
@@ -53,7 +53,7 @@ header {
     flex-direction: column;
     align-items: center;
     .container {
-        width: 980px;
+        @extend .container-width;
         display: flex;
         flex-direction: column;
         .text-right {
@@ -96,6 +96,9 @@ header {
                 }
             }
         }
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
     }
 }
 
@@ -107,7 +110,7 @@ footer {
     justify-content: center;
     padding-top: 20px;
     .container {
-        width: 980px;
+        @extend .container-width;
         display: flex;
         .copyright {
             flex-grow: 1;

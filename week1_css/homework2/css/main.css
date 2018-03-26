@@ -1,3 +1,6 @@
+.container-width, header .container, .main .container, footer .container {
+  width: 980px; }
+
 .menu_active, header .container .menu .active, header .container li:hover {
   background: linear-gradient(#19aca8, #c8e09e, transparent 90%); }
   .menu_active a, header .container .menu .active a, header .container li:hover a {
@@ -13,8 +16,7 @@ header {
   background-image: url(../images/headerbg.jpg);
   margin-bottom: 20px; }
   header .container {
-    display: flex;
-    width: 980px; }
+    display: flex; }
     header .container .img-space {
       flex-grow: 2; }
     header .container .menu {
@@ -34,7 +36,6 @@ header {
   flex-direction: column;
   align-items: center; }
   .main .container {
-    width: 980px;
     display: flex;
     flex-direction: column; }
     .main .container .text-right {
@@ -67,6 +68,8 @@ header {
         .main .container .main-content .summary p a {
           color: #888;
           text-decoration: underline; }
+    .main .container .row-reverse {
+      flex-direction: row-reverse; }
 
 footer {
   height: 130px;
@@ -75,7 +78,6 @@ footer {
   justify-content: center;
   padding-top: 20px; }
   footer .container {
-    width: 980px;
     display: flex; }
     footer .container .copyright {
       flex-grow: 1;
