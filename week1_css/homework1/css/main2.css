@@ -1,0 +1,135 @@
+.active a, .hover-style a, header .menu li:hover a, header .menu div:hover a {
+  padding-bottom: 5px;
+  border-bottom: 2px solid; }
+
+.menu-style, header .menu li, header .menu div {
+  width: 100%;
+  text-align: center; }
+
+.tag, .main .container .waterfall .pic-margin .tag, .main .container .waterfall .pic-middle-margin .tag {
+  position: absolute;
+  background-color: #759CA4;
+  color: #FFFFFF;
+  padding: 16px 23px; }
+
+.footer-style, footer .container .contact-us, footer .container .payment, footer .container .subscribe {
+  padding: 30px 0 30px 25px;
+  line-height: 25px; }
+  .footer-style .title, footer .container .contact-us .title, footer .container .payment .title, footer .container .subscribe .title {
+    font-weight: bold; }
+
+.subscribe-field, footer .container .subscribe input, footer .container .subscribe button {
+  font-size: 15px;
+  border: 0;
+  padding: 10px 0; }
+
+.hover-style, header .menu li:hover, header .menu div:hover {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px; }
+
+header {
+  display: flex;
+  justify-content: center; }
+  header .container {
+    width: 980px; }
+  header .menu {
+    display: flex;
+    line-height: 110px; }
+    header .menu li a {
+      text-decoration: none;
+      color: #150D0F; }
+    header .menu div .icon {
+      color: #557277; }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: #EAECEE; }
+  .main .container {
+    width: 980px;
+    align-self: center; }
+    .main .container .banner {
+      display: flex;
+      margin-bottom: 10px; }
+      .main .container .banner .title-space {
+        background-color: #759CA4;
+        padding: 57px 110px 20px 60px;
+        flex-grow: 1; }
+        .main .container .banner .title-space .title {
+          color: #38494d;
+          line-height: 50px;
+          font-size: 45px;
+          letter-spacing: 2px;
+          font-weight: bold;
+          margin-bottom: 20px; }
+        .main .container .banner .title-space .sub-title {
+          color: #FFFFFF;
+          font-size: 20px;
+          letter-spacing: 1px;
+          border-bottom: 3px solid  #557277;
+          padding-bottom: 5px; }
+    .main .container .waterfall {
+      column-width: 314px;
+      column-gap: 5px;
+      height: 2010px; }
+      .main .container .waterfall .pic-margin {
+        margin-bottom: 10px; }
+      .main .container .waterfall .pic-middle-margin {
+        margin-bottom: 16px; }
+      .main .container .waterfall .title {
+        color: #FFFFFF;
+        background-color: #759CA4;
+        font-weight: bold;
+        text-align: center;
+        font-size: 39px;
+        margin-bottom: 17px;
+        line-height: 170px;
+        width: 314px; }
+
+footer {
+  background-color: #557277;
+  display: flex;
+  justify-content: center; }
+  footer .container {
+    width: 980px;
+    display: flex;
+    color: #d0d0d0; }
+    footer .container .contact-us {
+      flex-grow: 1; }
+      footer .container .contact-us a {
+        font-size: 20px;
+        color: #FFFFFF;
+        text-decoration: none; }
+      footer .container .contact-us .social-icon {
+        display: flex;
+        margin-top: 7px; }
+        footer .container .contact-us .social-icon li {
+          padding-right: 13px; }
+    footer .container .payment {
+      flex-grow: 1; }
+      footer .container .payment ul {
+        display: flex;
+        margin-top: 10px; }
+        footer .container .payment ul li {
+          margin: 0 5px; }
+    footer .container .subscribe {
+      flex-grow: 10;
+      padding-right: 10px;
+      display: flex;
+      flex-direction: column; }
+      footer .container .subscribe input {
+        background-color: #d0d0d0;
+        margin-bottom: 10px; }
+      footer .container .subscribe button {
+        background: #38494d;
+        color: #FFFFFF; }
+
+.copyright {
+  background-color: #545354;
+  text-align: center;
+  font-size: 10px;
+  padding: 20px 0;
+  color: #FFFFFF; }
+  .copyright a {
+    color: #FFFFFF; }
