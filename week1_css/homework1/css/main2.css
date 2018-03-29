@@ -70,8 +70,6 @@ header {
           border-bottom: 3px solid  #557277;
           padding-bottom: 5px; }
     .main .container .waterfall {
-      column-width: 314px;
-      column-gap: 5px;
       height: 2010px; }
       .main .container .waterfall .pic-margin {
         margin-bottom: 10px; }

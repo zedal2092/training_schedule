@@ -1,4 +1,6 @@
 
+$container-size:980px;
+
 .active {
     a {
         padding-bottom: 5px;
@@ -43,7 +45,7 @@ header {
     display: flex;
     justify-content: center;
     .container {
-        width: 980px;
+        width: $container-size;
     }
     .menu {
         display: flex;
@@ -76,14 +78,13 @@ header {
     flex-direction: column;
     background-color: #EAECEE;
     .container {
-        width: 980px;
+        width: $container-size;
         align-self: center;
         .banner {
             display: flex;
             margin-bottom: 10px;
             .title-space {
                 background-color: #759CA4;
-                
                 padding: 57px 110px 20px 60px;;
                 flex-grow: 1;
                 .title {
@@ -104,8 +105,6 @@ header {
             }
         }
         .waterfall {
-            column-width: 314px;
-            column-gap: 5px;
             height: 2010px;
             .pic-margin {
                 margin-bottom: 10px;
@@ -139,7 +138,7 @@ footer {
     display: flex;
     justify-content: center;
     .container {
-        width: 980px;
+        width: $container-size;
         display: flex;
         color: #d0d0d0;
         .contact-us {
